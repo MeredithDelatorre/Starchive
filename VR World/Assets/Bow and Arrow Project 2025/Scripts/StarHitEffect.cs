@@ -39,6 +39,6 @@ public class StarHitEffect : MonoBehaviour {
             sphereMaterial.color = newColor;
             yield return new WaitForSeconds(0.05f);
         }
-        gameObject.GetComponent<Collider>().enabled = false; // Disable sphere's collider 
+        //gameObject.GetComponent<Collider>().enabled = false; // Disable sphere's collider 
     }
 }
