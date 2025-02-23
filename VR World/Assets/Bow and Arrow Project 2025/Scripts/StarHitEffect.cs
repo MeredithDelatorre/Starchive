@@ -3,8 +3,9 @@ using System.Collections;
 
 public class StarHitEffect : MonoBehaviour {
     private Renderer sphereRenderer;
-    public GameObject newObject; // Assign in the Inspector
+    public GameObject newObject; // New object with VFX that will replace sphere 
     private Material sphereMaterial;
+    public HitTracker hitTracker; // Reference to the HitTracker script
 
     private void Start() {
         sphereRenderer = GetComponent<Renderer>();
@@ -23,6 +24,11 @@ public class StarHitEffect : MonoBehaviour {
             if (sphereMaterial != null) {
                 StartCoroutine(FadeOut());
             }
+
+            // Register this hit in the HitTracker to draw the line
+            if (hitTracker != null) {
+                hitTracker.RegisterHit(transform.position);
+            }
         }
     }
 
@@ -33,6 +39,6 @@ public class StarHitEffect : MonoBehaviour {
             sphereMaterial.color = newColor;
             yield return new WaitForSeconds(0.05f);
         }
-        gameObject.SetActive(false); // Deactivate sphere
+        gameObject.GetComponent<Collider>().enabled = false; // Disable sphere's collider 
     }
 }
