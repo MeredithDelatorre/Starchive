@@ -12,8 +12,8 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: Fist Full of Shrimp LLC
-  productName: PolterBolter
+  companyName: Meredith de la Torre
+  productName: 'VR World '
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -143,8 +143,6 @@ PlayerSettings:
   bundleVersion: 0.1
   preloadedAssets:
   - {fileID: 0}
-  - {fileID: 2969905148873169364, guid: 045b7283611fb2f4fb1fb296448f9a5a, type: 2}
-  - {fileID: -8196854396901781169, guid: 1a4c68ca72a83449f938d669337cb305, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -166,7 +164,7 @@ PlayerSettings:
   androidMaxAspectRatio: 2.1
   androidMinAspectRatio: 1
   applicationIdentifier:
-    Android: com.unity.PolterBolter
+    Android: com.unity.VRWorld
     Standalone: com.Unity-Technologies.VR-Template
   buildNumber:
     Standalone: 0
@@ -962,10 +960,10 @@ PlayerSettings:
   captureStartupLogs: {}
   activeInputHandler: 1
   windowsGamepadBackendHint: 0
-  cloudProjectId: 8959127f-0ae0-4ec0-a8cc-96025337ec86
+  cloudProjectId: 04e81bad-7b22-4424-89b9-0bfe5cde7e7f
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: PolterBolter
+  projectName: 'VR World '
   organizationId: afterlifemer
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
