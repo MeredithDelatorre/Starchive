@@ -6,11 +6,21 @@
 Created by **Meredith de la Torre** for *Building Virtual Worlds* (CIM 423) at the **University of Miami**, Spring 2025.
 
 In Starchive you wield a magical bow to draw constellations on a board, then launch them into the night sky. When you're done, you "wake up" in your bedroom to end the experience. 
+
 ---
 
 ## 🖼️ Gallery
 
+**Starchive Scene**
+![image](https://github.com/user-attachments/assets/ac7582ba-827e-4ccc-b20f-870dcc91667d)
+![image](https://github.com/user-attachments/assets/a1d4236d-1e73-4e5b-826e-b795bc41a0c2)
+![image](https://github.com/user-attachments/assets/2c943ef5-f57f-4f73-a341-2ae889af792b)
+![image](https://github.com/user-attachments/assets/4de27fdf-bc0e-438b-9064-50e559c5063f)
+![image](https://github.com/user-attachments/assets/7814d367-53f1-4fba-87ab-42a95d25ac33)
 
+**Bedroom Scene**
+![image](https://github.com/user-attachments/assets/4673739d-7f6f-4e79-87d7-c64152b0f80b)
+![image](https://github.com/user-attachments/assets/434afa5a-35c7-42ff-9116-5327ef540da7)
 
 ---
 
