@@ -13,7 +13,11 @@ In Starchive you wield a magical bow to draw constellations on a board, then lau
 
 | Action | Result | Preview |
 |--------|--------|---------|
-| **Introductory UI** | Click **Next** to page through the introduction; clicking **Next** on the last page closes the prompt. | ![](docs/gifs/intro_ui.gif) |
+| **Introductory UI** | Click **Next** to page through the introduction; clicking **Next** on the last page closes the prompt. |
+
+https://github.com/user-attachments/assets/29d852ef-c9de-4ab6-b657-5dca9afe57fe
+
+ |
 | **Grab bow & arrow** | Pick up the bow with either VR controller; an arrow auto‑spawns on the string. | ![](docs/gifs/grab_bow.gif) |
 | **Pull & release** | Shoot an arrow straight ahead; arrows collide with the environment. | ![](docs/gifs/pull_release.gif) |
 | **Guide UI (close button)** | Click **Close Panel** to hide the on‑demand guide. | ![](docs/gifs/guide_close.gif) |
