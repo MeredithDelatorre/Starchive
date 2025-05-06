@@ -9,6 +9,15 @@ In Starchive you wield a magical bow to draw constellations on a board, then lau
 
 ---
 
+## 🚀 How to Run
+
+1. Clone or download this repository.  
+2. Open the project with **Unity 6** (Tech Stream).  
+3. Install **XR Interaction Toolkit** via Package Manager if it’s not already present.  
+4. Load the **`Starchive`** scene and press **Play** in the Editor, or build to an OpenXR‑compatible headset (Quest Link recommended for quick testing).  
+
+---
+
 ## 🖼️ Gallery
 
 **Starchive Scene**
@@ -125,15 +134,6 @@ https://github.com/user-attachments/assets/53f94694-5a3c-49ae-98f2-b9769e6e2dd7
 ### 🔤 Fonts & UI Elements
 - **[New Rocker](https://www.1001fonts.com/new-rocker-font.html)** – display font  
 - **[Realistic Open Parchment Scroll](https://www.freepik.com/free-vector/realistic-open-parchment-scroll-transparent_39845337.htm)** – decorative UI graphic
-
----
-
-## 🚀 How to Run
-
-1. Clone or download this repository.  
-2. Open the project with **Unity 6** (Tech Stream).  
-3. Install **XR Interaction Toolkit** via Package Manager if it’s not already present.  
-4. Load the **`Starchive`** scene and press **Play** in the Editor, or build to an OpenXR‑compatible headset (Quest Link recommended for quick testing).  
 
 ---
 
