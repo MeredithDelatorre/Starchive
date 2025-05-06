@@ -5049,7 +5049,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80e173e3a84301b45bd0ffe62c8ecf5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 2
+  _speed: 100
   _trailSystem: {fileID: 6423409588851913718}
 --- !u!114 &2261207983032775171
 MonoBehaviour:

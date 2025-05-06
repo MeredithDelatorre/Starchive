@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 471296427699232843}
   - component: {fileID: 4440342795814772513}
   m_Layer: 0
-  m_Name: linePrefab
+  m_Name: boardLinePrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -56,7 +56,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c75cb80aa73245e49b2168d551cb1bce, type: 2}
+  - {fileID: 2100000, guid: 0a16d84c575010f44b52306daae2ac78, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -81,7 +81,7 @@ LineRenderer:
   - {x: 0, y: 0, z: 0}
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 1
+    widthMultiplier: 0.2
     widthCurve:
       serializedVersion: 2
       m_Curve:

@@ -3,38 +3,41 @@ using System;
 
 [RequireComponent(typeof(Collider))]
 public class CircleTarget : MonoBehaviour {
-    [Header("Visuals")]
-    [SerializeField] Renderer circleRenderer;          // assign in Inspector
-    [SerializeField] Color activatedColour = Color.cyan;
-    [SerializeField] float glowIntensity = 4f;
+    [Header("Materials")]
+    [Tooltip("Material you want while the circle is inactive / reset")]
+    [SerializeField] Material defaultMaterial;        // drag your normal board material here
+
+    [Tooltip("Material to use AFTER the first arrow hits")]
+    [SerializeField] Material activeMaterial;         // drag the bright ActiveColor material here
+
+    [Header("Renderer")]
+    [SerializeField] Renderer circleRenderer;         // assign in the Inspector
 
     public bool IsActivated { get; private set; } = false;
-    public event Action<CircleTarget> OnActivated;     // constellation manager subscribes
-
-    MaterialPropertyBlock _props;
-    static readonly int Emission = Shader.PropertyToID("_EmissionColor");
-    Color _originalColour;
+    public event Action<CircleTarget> OnActivated;
 
     void Awake() {
-        if (circleRenderer == null) circleRenderer = GetComponent<Renderer>();
-        _props = new MaterialPropertyBlock();
-        circleRenderer.GetPropertyBlock(_props);
-        _originalColour = _props.GetVector(Emission);
+        if (circleRenderer == null)
+            circleRenderer = GetComponent<Renderer>();
+
+        // If you forgot to set defaultMaterial, use whatever the renderer has in the scene
+        if (defaultMaterial == null)
+            defaultMaterial = circleRenderer.sharedMaterial;
     }
 
     public void Activate() {
-        if (IsActivated) return;                       // ignore duplicate arrows
-        IsActivated = true;
+        /* ---- first arrow: swap to the ActiveColor material ---- */
+        if (!IsActivated) {
+            IsActivated = true;
+            circleRenderer.sharedMaterial = activeMaterial;
+        }
 
-        _props.SetColor(Emission, activatedColour * glowIntensity);
-        circleRenderer.SetPropertyBlock(_props);
-
+        /* ---- every arrow (including repeats) notifies listeners ---- */
         OnActivated?.Invoke(this);
     }
 
     public void ResetVisual() {
-        _props.SetColor(Emission, _originalColour);
-        circleRenderer.SetPropertyBlock(_props);
+        circleRenderer.sharedMaterial = defaultMaterial;
         IsActivated = false;
     }
 }

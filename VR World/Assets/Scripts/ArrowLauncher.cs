@@ -5,7 +5,7 @@ using UnityEngine.XR.Interaction.Toolkit.Interactables;
 public class ArrowLauncher : MonoBehaviour
 {
     [Header("Launch Settings")]
-    [SerializeField] private float _speed = 45f;
+    [SerializeField] private float _speed = 100f;
 
     [Header("Visual Effects")]
     [SerializeField] private GameObject _trailSystem;
