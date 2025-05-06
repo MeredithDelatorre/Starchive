@@ -9,12 +9,6 @@ In Starchive you wield a magical bow to draw constellations on a board, then lau
 
 ---
 
-## 👤 Created By
-
-- Meredith de la Torre  
-
----
-
 ## 🕹️ Interactions
 
 | Action | Result | Preview |
