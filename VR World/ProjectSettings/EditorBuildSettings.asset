@@ -5,21 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 55daccc09a3b69647bbab145b54a3ab3
-  - enabled: 0
-    path: Assets/OldProject/Scenes/Demo.unity
-    guid: e882e6f1a50fdf140a021a9816163680
-  - enabled: 0
-    path: Assets/OldProject/Scenes/Space Tea Party.unity
-    guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
     path: Assets/Scenes/Starchive.unity
     guid: c067c75f4372c6d46931debc5fdf2826
-  - enabled: 0
-    path: Assets/OldProject/Scenes/gum ball.unity
-    guid: f951ed9f46e52eb4fac07f72c99dd934
+  - enabled: 1
+    path: Assets/Scenes/Bedroom.unity
+    guid: e56cc05419c1abc4aa2cfdc61fbc0cb2
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: bfa1182bd221b4ca89619141f66f1260, type: 2}
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: dc5a169419fa04987b057f65238cf3ba, type: 2}
