@@ -10,6 +10,7 @@ TagManager:
   - RightHand
   - LeftHand
   - Sliceable
+  - Sky
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - Arrow
   - Player
   - Enemy
-  - 
+  - Sky
   - 
   - 
   - 
