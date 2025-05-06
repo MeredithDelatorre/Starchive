@@ -3,15 +3,10 @@ using System;
 
 [RequireComponent(typeof(Collider))]
 public class CircleTarget : MonoBehaviour {
-    [Header("Materials")]
-    [Tooltip("Material you want while the circle is inactive / reset")]
-    [SerializeField] Material defaultMaterial;        // drag your normal board material here
 
-    [Tooltip("Material to use AFTER the first arrow hits")]
-    [SerializeField] Material activeMaterial;         // drag the bright ActiveColor material here
-
-    [Header("Renderer")]
-    [SerializeField] Renderer circleRenderer;         // assign in the Inspector
+    [SerializeField] Material defaultMaterial;    
+    [SerializeField] Material activeMaterial;        
+    [SerializeField] Renderer circleRenderer;  
 
     public bool IsActivated { get; private set; } = false;
     public event Action<CircleTarget> OnActivated;
@@ -20,7 +15,7 @@ public class CircleTarget : MonoBehaviour {
         if (circleRenderer == null)
             circleRenderer = GetComponent<Renderer>();
 
-        // If you forgot to set defaultMaterial, use whatever the renderer has in the scene
+        // If theres no set defaultMaterial, use whatever the renderer has in the scene
         if (defaultMaterial == null)
             defaultMaterial = circleRenderer.sharedMaterial;
     }

@@ -59,27 +59,24 @@ public class ConstellationManager : MonoBehaviour {
 
     /* ---------- UI button ---------- */
 
-    public void FinaliseBoardPattern()                      // hooked up to your XR button
-    {
+    public void FinaliseBoardPattern() {
         Debug.Log("<color=lime>FinaliseBoardPattern() called</color>");
         _waitingForSkyArrow = true;
         Debug.Log("Constellation finalised — shoot into the sky to place it!");
     }
 
     /* ---------- arrow hits sky ---------- */
-
-    // ConstellationManager.cs
     public void PlaceConstellation(Vector3 hitPoint) {
         if (!_waitingForSkyArrow) return;
 
         /* ---------- create a tidy parent at the impact point ---------- */
         var constellationParent = new GameObject("Constellation").transform;
         constellationParent.position = hitPoint;
-        constellationParent.SetParent(skyRoot, true);            // keeps hierarchy clean
+        constellationParent.SetParent(skyRoot, true);
 
         /* ---------- build a tangent basis that matches the BOARD’s axes ---------- */
-        Vector3 domeCenter = skyRoot.position;                    // skyRoot = centre of dome
-        Vector3 radial = (hitPoint - domeCenter).normalized;  // normal of the dome here
+        Vector3 domeCenter = skyRoot.position;
+        Vector3 radial = (hitPoint - domeCenter).normalized; 
         float radius = (hitPoint - domeCenter).magnitude;   // dome radius
 
         // Project boardRight / boardUp onto the tangent plane so X & Y keep the board’s orientation
@@ -91,7 +88,7 @@ public class ConstellationManager : MonoBehaviour {
         Vector3 axisY = boardRoot.up - radial * Vector3.Dot(boardRoot.up, radial);
         axisY.Normalize();
 
-        /* ---------- 1. centroid of picked circles (board‑local) ---------- */
+        /* ---------- 1. centroid of picked circles ---------- */
         Vector3 centroidLocal = Vector3.zero;
         foreach (var c in _picked) centroidLocal += c.transform.localPosition;
         centroidLocal /= _picked.Count;
@@ -100,7 +97,7 @@ public class ConstellationManager : MonoBehaviour {
         var starWorldPos = new List<Vector3>();
 
         foreach (var circle in _picked) {
-            Vector3 local = circle.transform.localPosition - centroidLocal; // ← shape centred
+            Vector3 local = circle.transform.localPosition - centroidLocal; // shape centred
 
             // Map board X,Y onto the tangent basis and scale it
             Vector3 worldOffset = axisX * local.x * skyScale +
@@ -129,7 +126,7 @@ public class ConstellationManager : MonoBehaviour {
             lr.SetPosition(0, starWorldPos[i - 1]);
             lr.SetPosition(1, starWorldPos[i]);
 
-            g.transform.SetParent(constellationParent, true);    // keep hierarchy tidy
+            g.transform.SetParent(constellationParent, true);
         }
 
         /* ---------- 4. reset the board for the next pattern ---------- */
